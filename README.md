@@ -1,113 +1,113 @@
 
 > [!NOTE]
-> If you enjoy Aimmy, please consider giving us a star ⭐! We appreciate it! :)
+> Se você gosta do Aimmy, por favor considere nos dar uma estrela ⭐! Nós agradecemos! :)
   <p>
     <a href="https://aimmy.dev/" target="_blank">
       <img width="100%" src="readme_assets/AimmyV2Banner.png"></a>
   </p>
 
-Aimmy is a universal AI-Based Aim Alignment Mechanism developed by BabyHamsta, MarsQQ & Taylor to make gaming more accessible for users who have difficulty aiming.
+Aimmy é um Mecanismo Universal de Alinhamento de Mira baseado em IA desenvolvido por BabyHamsta, MarsQQ e Taylor para tornar os jogos mais acessíveis para usuários que têm dificuldade em mirar.
 
-Unlike most AI-Based Aim Alignment Mechanisms, Aimmy utilizes DirectML, ONNX, and YOLOV8 to detect players, offering both higher accuracy and faster performance compared to other Aim Aligners, especially on AMD GPUs, which would not perform well on Aim Alignment Mechanisms that utilize TensorRT.
+Diferente da maioria dos Mecanismos de Alinhamento de Mira baseados em IA, o Aimmy utiliza DirectML, ONNX e YOLOV8 para detectar jogadores, oferecendo maior precisão e desempenho mais rápido comparado a outros Alinhadores de Mira, especialmente em GPUs AMD, que não teriam bom desempenho em Mecanismos de Alinhamento de Mira que utilizam TensorRT.
 
-Aimmy also provides an easy to use user-interface, a wide set of features and customizability options which makes Aimmy a great option for anyone who wants to use and tailor an Aim Alignment Mechanism for a specific game without having to code.
+O Aimmy também fornece uma interface de usuário fácil de usar, um amplo conjunto de recursos e opções de personalização que fazem do Aimmy uma ótima opção para qualquer pessoa que queira usar e adaptar um Mecanismo de Alinhamento de Mira para um jogo específico sem precisar programar.
 
-Aimmy is 100% free to use. This means no ads, no key system, and no paywalled features. Aimmy is not, and will never be for sale for the end user, and is considered a source-available product, **not open source** as we actively discourage other developers from making commercial forks of Aimmy.
+O Aimmy é 100% gratuito para usar. Isso significa sem anúncios, sem sistema de chaves e sem recursos pagos. O Aimmy não está, e nunca estará à venda para o usuário final, e é considerado um produto de código-disponível, **não código aberto**, pois desencorajamos ativamente outros desenvolvedores de fazer versões comerciais do Aimmy.
 
-Please do not confuse Aimmy as an open-source project, we are not, and we have never been one.
+Por favor, não confunda o Aimmy como um projeto de código aberto, nós não somos, e nunca fomos um.
 
-Want to connect with us? Join our Discord Server: https://discord.gg/aimmy
+Quer se conectar conosco? Junte-se ao nosso Servidor do Discord: https://discord.gg/aimmy
 
-If you want to share Aimmy with your friends, our website is: https://aimmy.dev/
+Se você quiser compartilhar o Aimmy com seus amigos, nosso site é: https://aimmy.dev/
 
-## Table of Contents
-- [What is the purpose of Aimmy?](#what-is-the-purpose-of-aimmy)
-- [How does Aimmy Work?](#how-does-aimmy-work)
-- [Features](#features)
-- [Setup](#setup)
-- [How is Aimmy better than similar AI-Based tools?](#how-is-aimmy-better-than-similar-ai-based-tools)
-- [How the hell is Aimmy free?](#how-the-hell-is-aimmy-free)
-- [How do I train my own model?](#how-do-i-train-my-own-model)
-- [How do I upload my model to the "Downloadable Models" menu](ModelUpload.md)
+## Índice
+- [Qual é o propósito do Aimmy?](#qual-é-o-propósito-do-aimmy)
+- [Como o Aimmy funciona?](#como-o-aimmy-funciona)
+- [Recursos](#recursos)
+- [Instalação](#instalação)
+- [Como o Aimmy é melhor que ferramentas similares baseadas em IA?](#como-o-aimmy-é-melhor-que-ferramentas-similares-baseadas-em-ia)
+- [Como diabos o Aimmy é gratuito?](#como-diabos-o-aimmy-é-gratuito)
+- [Como eu treino meu próprio modelo?](#como-eu-treino-meu-próprio-modelo)
+- [Como eu faço upload do meu modelo para o menu "Modelos Disponíveis para Download"](ModelUpload.md)
 
 
 
-## What is the purpose of Aimmy?
-### Aimmy was designed for Gamers who are at a severe disadvantage over normal gamers.
-### This includes but is not limited to:
-- Gamers who are physically challenged
-- Gamers who are mentally challenged
-- Gamers who suffer from untreated/untreatable visual impairments
-- Gamers who do not have access to a seperate Human-Interface Device (HID) for controlling the pointer
-- Gamers trying to improve their reaction time
-- Gamers with poor Hand/Eye coordination
-- Gamers who perform poorly in FPS games
-- Gamers who play for long periods in hot environments, causing greasy hands that make aiming difficult 
+## Qual é o propósito do Aimmy?
+### O Aimmy foi projetado para Jogadores que estão em severa desvantagem em relação aos jogadores normais.
+### Isso inclui, mas não se limita a:
+- Jogadores com deficiências físicas
+- Jogadores com deficiências mentais
+- Jogadores que sofrem de deficiências visuais não tratadas/intratáveis
+- Jogadores que não têm acesso a um Dispositivo de Interface Humana (HID) separado para controlar o ponteiro
+- Jogadores tentando melhorar seu tempo de reação
+- Jogadores com coordenação Mão/Olho ruim
+- Jogadores que têm desempenho ruim em jogos FPS
+- Jogadores que jogam por longos períodos em ambientes quentes, causando mãos suadas que dificultam a mira
 
-## How does Aimmy Work?
+## Como o Aimmy funciona?
 ```mermaid
 flowchart  LR
-A["Playing Game System"]
-C["Screen Grabbing Functionality"]
-B["YOLOv8 (DirectML + ONNX) Recognition"]
-D{Making Decision}
-DA["X+Y Adjustment"]
+A["Sistema de Jogo"]
+C["Funcionalidade de Captura de Tela"]
+B["Reconhecimento YOLOv8 (DirectML + ONNX)"]
+D{Tomando Decisão}
+DA["Ajuste X+Y"]
 DB["FOV"]
-E["Triggering Functionality"]
-F["Mouse Cursor"]
+E["Funcionalidade de Ativação"]
+F["Cursor do Mouse"]
 
 A --> E--> C  -->  B  --> D --> F 
 DA  -->  D
 DB  -->  D
 
 ```
-When you press the trigger binding, Aimmy will capture the screen and run the image through AI recognition powered by your computer hardware. The result it develops will be combined with any adjustment you made in the X and Y axis, and your current FOV and will result in a change in your mouse cursor position.
+Quando você pressiona a tecla de ativação, o Aimmy capturará a tela e processará a imagem através do reconhecimento de IA alimentado pelo hardware do seu computador. O resultado desenvolvido será combinado com qualquer ajuste que você fez nos eixos X e Y, e seu FOV atual, resultando em uma mudança na posição do cursor do mouse.
 
-## Features
-1. Full Fledged UI
-	- Aimmy provides a well designed and full-fledged UI for easy usage and game adjustment.
-2. DirectML + ONNX + YOLOv8 AI Detection Algorithm
-	- The use of these technologies allows Aimmy to be one of the most accurate and fastest Aim Alignment Mechanisms out there in the world
-3. Dynamic Customizability System
-	- Aimmy provides an interactive customizability system with various features that auto-updates the way Aimmy will aim as you customize. From AI Confidence to FOV, Aimmy makes it easy for anyone to tune their aim
-4. Dynamic Visual System
-	- Aimmy contains a universal ESP system that will highlight the player detected by the AI. This is helpful for visually impaired users who have a hard time differentiating enemies, and for configuration creators attempting to debug their configurations.
-5. Mouse Movement Method
-	- Aimmy grants you the right to switch between 5 Mouse Movement Methods depending on your Mouse Type and Game for better Aim Alignment
-6. Hotswappability
-	- Aimmy lets you hotswap models and configurations on the go. There is no need to reset Aimmy to make your changes
-7. Model and Configuration Store with Repository Support
-	- Aimmy makes it easy to get any models and configurations you may ever need, and with repository support, you can get up to date with the latest models and configurations from your favorite creators
+## Recursos
+1. Interface Completa
+	- O Aimmy fornece uma interface bem projetada e completa para fácil uso e ajuste de jogo.
+2. Algoritmo de Detecção de IA DirectML + ONNX + YOLOv8
+	- O uso dessas tecnologias permite que o Aimmy seja um dos Mecanismos de Alinhamento de Mira mais precisos e rápidos do mundo
+3. Sistema de Personalização Dinâmica
+	- O Aimmy fornece um sistema de personalização interativo com vários recursos que atualizam automaticamente a forma como o Aimmy mira conforme você personaliza. Da Confiança da IA ao FOV, o Aimmy facilita para qualquer pessoa ajustar sua mira
+4. Sistema Visual Dinâmico
+	- O Aimmy contém um sistema ESP universal que destacará o jogador detectado pela IA. Isso é útil para usuários com deficiência visual que têm dificuldade em diferenciar inimigos, e para criadores de configuração tentando depurar suas configurações.
+5. Método de Movimento do Mouse
+	- O Aimmy concede a você o direito de alternar entre 5 Métodos de Movimento do Mouse dependendo do seu Tipo de Mouse e Jogo para melhor Alinhamento de Mira
+6. Troca a Quente
+	- O Aimmy permite que você troque modelos e configurações em tempo real. Não há necessidade de reiniciar o Aimmy para fazer suas alterações
+7. Loja de Modelos e Configurações com Suporte a Repositório
+	- O Aimmy facilita obter quaisquer modelos e configurações que você possa precisar, e com suporte a repositório, você pode se manter atualizado com os modelos e configurações mais recentes de seus criadores favoritos
 
-## Setup
-- Download and Install the x64 version of [.NET Runtime 8.0.X.X](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.2-windows-x64-installer)
-- Download and Install the x64 version of [Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- Download Aimmy from [Releases](https://github.com/Babyhamsta/Aimmy/releases/latest) (Make sure it's the Aimmy zip and not Source zip)
-- Extract the Aimmy.zip file
-- Run Aimmy.exe
-- Choose your Model and Enjoy :)
+## Instalação
+- Baixe e Instale a versão x64 do [.NET Runtime 8.0.X.X](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.2-windows-x64-installer)
+- Baixe e Instale a versão x64 do [Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+- Baixe o Aimmy em [Releases](https://github.com/Babyhamsta/Aimmy/releases/latest) (Certifique-se de que é o zip do Aimmy e não o zip Source)
+- Extraia o arquivo Aimmy.zip
+- Execute o Aimmy.exe
+- Escolha seu Modelo e Divirta-se :)
 
-## How is Aimmy better than similar AI-Based tools?
-Aimmy is written in C# using .NET 8 and WPF utilizing pre-existing libraries like DirectML and ONNX. This has allowed us to make a very fast Aim Aligner with high compatiblity on both AMD and NVIDIA GPUs without sacrificing the end-user experience.
+## Como o Aimmy é melhor que ferramentas similares baseadas em IA?
+O Aimmy é escrito em C# usando .NET 8 e WPF utilizando bibliotecas pré-existentes como DirectML e ONNX. Isso nos permitiu fazer um Alinhador de Mira muito rápido com alta compatibilidade em GPUs AMD e NVIDIA sem sacrificar a experiência do usuário final.
 
-<img src="readme_assets/UI.gif" alt="UI Overview" width="400"/>
+<img src="readme_assets/UI.gif" alt="Visão Geral da Interface" width="400"/>
 
-Beyond the core functionality, Aimmy also adds some amazing additional features like Detection ESP to help you tune your gaming experience however you like it.
+Além da funcionalidade principal, o Aimmy também adiciona alguns recursos adicionais incríveis como ESP de Detecção para ajudá-lo a ajustar sua experiência de jogo como você preferir.
 
-Aimmy comes pre-bundled with a well trained AI model with thousands of images. 
+O Aimmy vem pré-empacotado com um modelo de IA bem treinado com milhares de imagens.
 
-Besides that model, Aimmy provides dozens of other community made models through the store and our Discord server, with more models being developed every day by other Aimmy users. These models vary from game to image count, making Aimmy incredibly versatile and universal for thousands of games on the market right now.
+Além desse modelo, o Aimmy fornece dezenas de outros modelos feitos pela comunidade através da loja e nosso servidor do Discord, com mais modelos sendo desenvolvidos todos os dias por outros usuários do Aimmy. Esses modelos variam de jogo para contagem de imagens, tornando o Aimmy incrivelmente versátil e universal para milhares de jogos no mercado agora.
 
-## How the hell is Aimmy free?
-As an AI based Aim Aligner, Aimmy does not require any sort of upkeep because it does not read any specific game data to perform it's actions. If Aimmy team stops maintaining Aimmy, even if no one pitches in to fork and maintain the project, Aimmy would still work.
+## Como diabos o Aimmy é gratuito?
+Como um Alinhador de Mira baseado em IA, o Aimmy não requer nenhum tipo de manutenção porque não lê nenhum dado específico do jogo para realizar suas ações. Se a equipe do Aimmy parar de manter o Aimmy, mesmo que ninguém contribua para fazer um fork e manter o projeto, o Aimmy ainda funcionaria.
 
-This has meant that while we do currently use out of pocket expenses to run Aimmy, those expenses have been low enough that it hasn't been a necessity for Aimmy to run on even an ad-supported model.
+Isso significou que, embora atualmente usemos despesas do próprio bolso para executar o Aimmy, essas despesas foram baixas o suficiente para que não tenha sido uma necessidade para o Aimmy funcionar mesmo em um modelo suportado por anúncios.
 
-We do not seek to make money from Aimmy, we only seek your kind words <3, and a chance to help people aim better, by assisting their aim or even to train how they aim (yes, you can use Aimmy in that way too)
+Não buscamos ganhar dinheiro com o Aimmy, buscamos apenas suas palavras gentis <3, e uma chance de ajudar as pessoas a mirar melhor, assistindo sua mira ou até mesmo para treinar como elas miram (sim, você pode usar o Aimmy dessa forma também)
 
-## How do I train my own model
-Please see the video tutorial below on how to label images and train your own model. (Redirects to Youtube)
-[![Watch the video on Youtube](https://img.youtube.com/vi/i98wF4218-Q/maxresdefault.jpg)](https://youtu.be/i98wF4218-Q)
+## Como eu treino meu próprio modelo
+Por favor, veja o tutorial em vídeo abaixo sobre como rotular imagens e treinar seu próprio modelo. (Redireciona para o Youtube)
+[![Assista o vídeo no Youtube](https://img.youtube.com/vi/i98wF4218-Q/maxresdefault.jpg)](https://youtu.be/i98wF4218-Q)
 
-## How do I upload my model to the "Downloadable Models" menu?
-Please read the tutorial at [UploadModel.md](ModelUpload.md)
+## Como eu faço upload do meu modelo para o menu "Modelos Disponíveis para Download"?
+Por favor, leia o tutorial em [UploadModel.md](ModelUpload.md)
