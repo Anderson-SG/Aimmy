@@ -40,12 +40,13 @@ namespace VoidShot.Controls
         public Label SelectedModelNotifierControl => SelectedModelNotifier;
         public ListBox ConfigsListBoxControl => ConfigsListBox;
         public Label SelectedConfigNotifierControl => SelectedConfigNotifier;
-        public Label LackOfModelsTextControl => LackOfModelsText;
-        public Label LackOfConfigsTextControl => LackOfConfigsText;
-        public StackPanel ModelStoreScrollerControl => ModelStoreScroller;
-        public StackPanel ConfigStoreScrollerControl => ConfigStoreScroller;
-        public TextBox SearchBoxControl => SearchBox;
-        public TextBox CSearchBoxControl => CSearchBox;
+        // DISABLED: Uncomment when re-enabling downloadable tabs
+        // public Label LackOfModelsTextControl => LackOfModelsText;
+        // public Label LackOfConfigsTextControl => LackOfConfigsText;
+        // public StackPanel ModelStoreScrollerControl => ModelStoreScroller;
+        // public StackPanel ConfigStoreScrollerControl => ConfigStoreScroller;
+        // public TextBox SearchBoxControl => SearchBox;
+        // public TextBox CSearchBoxControl => CSearchBox;
         public ScrollViewer ModelMenuScrollViewer => ModelMenu;
 
         // Override visibility changed to detect when tab is selected
@@ -53,12 +54,17 @@ namespace VoidShot.Controls
         {
             base.OnPropertyChanged(e);
 
+            // DISABLED: Uncomment when re-enabling downloadable tabs
+            /*
             if (e.Property == IsVisibleProperty && (bool)e.NewValue && !_storeLoaded && _isInitialized)
             {
                 _ = LoadStoreMenuAsync();
             }
+            */
         }
 
+        // DISABLED: Uncomment when re-enabling downloadable tabs
+        /*
         private async Task LoadStoreMenuAsync()
         {
             lock (_storeLock)
@@ -137,7 +143,10 @@ namespace VoidShot.Controls
                 });
             }
         }
+        */
 
+        // DISABLED: Uncomment when re-enabling downloadable tabs
+        /*
         private void UpdateStoreDisplay(StackPanel scroller, List<string> items, string folder)
         {
             scroller.Children.Clear();
@@ -163,6 +172,7 @@ namespace VoidShot.Controls
                 }
             }
         }
+        */
 
         private void OpenFolderB_Click(object sender, RoutedEventArgs e)
         {
@@ -187,6 +197,8 @@ namespace VoidShot.Controls
             }
         }
 
+        // DISABLED: Uncomment when re-enabling downloadable tabs
+        /*
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdateVisibilityBasedOnSearchText((TextBox)sender, ModelStoreScroller);
@@ -196,6 +208,7 @@ namespace VoidShot.Controls
         {
             UpdateVisibilityBasedOnSearchText((TextBox)sender, ConfigStoreScroller);
         }
+        */
 
         private void LocalModelSearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -222,6 +235,8 @@ namespace VoidShot.Controls
                 }
             }
         }
+        // DISABLED: Uncomment when re-enabling downloadable tabs
+        /*
         private void UpdateVisibilityBasedOnSearchText(TextBox textBox, Panel panel)
         {
             if (panel.Children.Count == 0) return;
@@ -239,6 +254,7 @@ namespace VoidShot.Controls
                 }
             }), DispatcherPriority.Input);
         }
+        */
 
         private void ModelListBox_DragOver(object sender, DragEventArgs e)
         {

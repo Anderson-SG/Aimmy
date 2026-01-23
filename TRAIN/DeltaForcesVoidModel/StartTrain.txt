@@ -1,0 +1,1 @@
+yolo task=detect mode=train imsz=640 data=CustomCharacterPath.yaml epochs=2000 batch=16 name=DeltaForcesVoidModelV1

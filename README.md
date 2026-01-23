@@ -2,7 +2,7 @@
 > [!NOTE]
 > Se você gosta do VoidShot, por favor considere nos dar uma estrela ⭐! Nós agradecemos! :)
   <p>
-    <img width="100%" src="readme_assets/AimmyV2Banner.png">
+    <img width="100%" src="readme_assets/VoidShotV2Banner.png">
   </p>
 
 VoidShot é um Mecanismo Universal de Alinhamento de Mira baseado em IA desenvolvido por Comunidade VoidShot para tornar os jogos mais acessíveis para usuários que têm dificuldade em mirar.
@@ -77,7 +77,7 @@ Quando você pressiona a tecla de ativação, o VoidShot capturará a tela e pro
 ## Instalação
 - Baixe e Instale a versão x64 do [.NET Runtime 8.0.X.X](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.2-windows-x64-installer)
 - Baixe e Instale a versão x64 do [Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- Baixe o VoidShot em [Releases](https://github.com/Babyhamsta/VoidShot/releases/latest) (Certifique-se de que é o zip do VoidShot e não o zip Source)
+- Baixe o VoidShot em [Releases](https://github.com/voidworld/VoidShot/releases/latest) (Certifique-se de que é o zip do VoidShot e não o zip Source)
 - Extraia o arquivo VoidShot.zip
 - Execute o VoidShot.exe
 - Escolha seu Modelo e Divirta-se :)

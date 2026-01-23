@@ -165,8 +165,8 @@ namespace VoidShot
             if (Directory.GetCurrentDirectory().Contains("Temp"))
             {
                 MessageBox.Show(
-                    "Hi, it is made aware that you are running Aimmy without extracting it from the zip file. " +
-                    "Please extract Aimmy from the zip file or Aimmy will not be able to run properly.\n\nThank you.",
+                    "Hi, it is made aware that you are running VoidShot without extracting it from the zip file. " +
+                    "Please extract VoidShot from the zip file or VoidShot will not be able to run properly.\n\nThank you.",
                     "VoidShot V2");
             }
         }
@@ -948,7 +948,7 @@ namespace VoidShot
                 {
                     MessageBox.Show(
                         $"The creator of this model suggests you use this model:\n{suggestedModel}",
-                        "Suggested Model - Aimmy");
+                        "Suggested Model - VoidShot");
                 }
             }
         }

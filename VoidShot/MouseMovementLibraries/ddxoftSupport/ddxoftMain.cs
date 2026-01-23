@@ -40,7 +40,7 @@ namespace MouseMovementLibraries.ddxoftSupport
             {
                 if (new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator) == false)
                 {
-                    MessageBox.Show("The ddxoft Virtual Input Driver requires Aimmy to be run as an administrator, please close Aimmy and run it as administrator to use this movement method.", "VoidShot");
+                    MessageBox.Show("The ddxoft Virtual Input Driver requires VoidShot to be run as an administrator, please close VoidShot and run it as administrator to use this movement method.", "VoidShot");
                     return false;
                 }
 

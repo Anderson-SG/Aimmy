@@ -26,7 +26,7 @@ namespace VoidShot.UILibrary
                 SetupHttpClientHeaders();
 
                 var encodedName = Uri.EscapeDataString(Name);
-                var downloadUri = new Uri($"https://github.com/VoidShot/VoidShot/raw/Aimmy-V2/{Path}/{encodedName}");
+                var downloadUri = new Uri($"https://github.com/VoidShot/VoidShot/raw/VoidShot-V2/{Path}/{encodedName}");
                 var downloadResult = await DownloadFileAsync(downloadUri, Path, Name);
 
                 if (downloadResult)

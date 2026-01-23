@@ -399,7 +399,7 @@ namespace VoidShot.AILogic
                     if (!outputMetadata.Values.All(metadata => metadata.Dimensions.SequenceEqual(expectedShape)))
                     {
                         Log(LogLevel.Error,
-                            $"Output shape does not match the expected shape of {string.Join("x", expectedShape)}.\nThis model will not work with Aimmy, please use an YOLOv8 model converted to ONNXv8.",
+                            $"Output shape does not match the expected shape of {string.Join("x", expectedShape)}.\nThis model will not work with VoidShot, please use an YOLOv8 model converted to ONNXv8.",
                             true, 10000);
                         return false;
                     }
@@ -545,7 +545,7 @@ namespace VoidShot.AILogic
                     }
                     else
                     {
-                        // No work to do—sleep briefly to free up CPU
+                        // No work to doï¿½sleep briefly to free up CPU
                         await Task.Delay(1);
                     }
                 }

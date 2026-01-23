@@ -33,6 +33,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <SignAssembly>False</SignAssembly>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <ApplicationIcon>death.ico</ApplicationIcon>
+    <PlatformTarget>x64</PlatformTarget>
+    <Copyright>VoidShot</Copyright>
+    <PackageIcon>death.png</PackageIcon>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
   
   </PropertyGroup>
 
@@ -55,6 +60,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="death.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\death.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
